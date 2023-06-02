@@ -123,8 +123,7 @@ for _ in range(args.n_samples):
     elif r == 3:
         word=''.join([random.choice(digits) for b in range(random.choice(word_lengths))])
     elif r == 4:
-        word=''.join([random.choice(smallletters) for b in range(random.choice(word_lengths))])
-        word=word+str(random.choice(punclist))
+        word=''.join([random.choice(punclist) for b in range(random.choice(word_lengths))])
 
     w,h=font.getsize(word)[0],font.getsize(word)[1]
     back_c=back_c.resize((w+5,h+5))
