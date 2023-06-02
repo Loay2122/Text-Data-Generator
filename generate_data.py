@@ -98,7 +98,7 @@ def random_transformation(img):
         img=np.array(img)
     return Image.fromarray(img)
 
-r = 0
+r = 4
 
 file=open('annotation.txt','a+')
 
@@ -111,7 +111,6 @@ for _ in range(args.n_samples):
     filename=''.join([random.choice(smallletters) for c in range(random.choice([5,6,7,8,9,10,11]))])
     font=ImageFont.truetype(random.choice(fonts_list),size=random.choice(font_size))
 
-    r = random.randint(0, 4)
 
     if r == 0:
         word=''.join([random.choice(smallletters) for b in range(random.choice(word_lengths))])
